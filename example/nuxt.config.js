@@ -40,7 +40,7 @@ export default {
   build: {
   },
 
-  generate: {
-    dir: '../docs'
+  router: {
+    base: '/<repository-name>/'
   }
 }
