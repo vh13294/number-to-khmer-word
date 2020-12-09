@@ -13,48 +13,48 @@ const ONE_QUADRILLION = 1000_000_000_000_000n;
 
 const seperator = '-';
 
-export function toWords(input: number|string): string {
+export function toWords(input: number | string): string {
     let word = '';
     let remainder = 0;
     const num = Number(input);
 
-    if(num < TEN) {
+    if (num < TEN) {
         word = SINGLE_DIGIT[num];
 
-    } else if(num < ONE_HUNDRED) {
+    } else if (num < ONE_HUNDRED) {
         remainder = num % TEN;
-        word = DOUBLE_DIGIT[Math.floor(num/TEN)];
+        word = DOUBLE_DIGIT[Math.floor(num / TEN)];
 
-    } else if(num < ONE_THOUSAND) {
+    } else if (num < ONE_THOUSAND) {
         remainder = num % ONE_HUNDRED;
-        word = SINGLE_DIGIT[Math.floor(num/ONE_HUNDRED)] + 'រយ';
-        
-    } else if(num < TEN_THOUSAND) {
+        word = SINGLE_DIGIT[Math.floor(num / ONE_HUNDRED)] + 'រយ';
+
+    } else if (num < TEN_THOUSAND) {
         remainder = num % ONE_THOUSAND;
-        word = SINGLE_DIGIT[Math.floor(num/ONE_THOUSAND)] + 'ពាន់';
+        word = SINGLE_DIGIT[Math.floor(num / ONE_THOUSAND)] + 'ពាន់';
 
-    } else if(num < ONE_HUNDRED_THOUSAND) {
+    } else if (num < ONE_HUNDRED_THOUSAND) {
         remainder = num % TEN_THOUSAND;
-        word = SINGLE_DIGIT[Math.floor(num/TEN_THOUSAND)] + 'ម៉ឺន';
+        word = SINGLE_DIGIT[Math.floor(num / TEN_THOUSAND)] + 'ម៉ឺន';
 
-    } else if(num < ONE_MILLION) {
+    } else if (num < ONE_MILLION) {
         remainder = num % ONE_HUNDRED_THOUSAND;
-        word = SINGLE_DIGIT[Math.floor(num/ONE_HUNDRED_THOUSAND)] + 'សែន';
+        word = SINGLE_DIGIT[Math.floor(num / ONE_HUNDRED_THOUSAND)] + 'សែន';
 
-    } else if(num < ONE_BILLION) {
+    } else if (num < ONE_BILLION) {
         remainder = num % ONE_MILLION;
-        word = toWords(Math.floor(num/ONE_MILLION)) + 'លាន';
+        word = toWords(Math.floor(num / ONE_MILLION)) + 'លាន';
 
-    } else if(num < ONE_TRILLION) {
+    } else if (num < ONE_TRILLION) {
         remainder = num % ONE_BILLION;
-        word = toWords(Math.floor(num/ONE_BILLION)) + 'ប៊ីលាន';
+        word = toWords(Math.floor(num / ONE_BILLION)) + 'ប៊ីលាន';
 
-    } else if(num < ONE_QUADRILLION) {
+    } else if (num < ONE_QUADRILLION) {
         remainder = num % ONE_TRILLION;
-        word = toWords(Math.floor(num/ONE_TRILLION)) + 'ទ្រីលាន';
+        word = toWords(Math.floor(num / ONE_TRILLION)) + 'ទ្រីលាន';
     }
 
-    if(remainder)
+    if (remainder)
         return `${word}${seperator}${toWords(remainder)}`;
     return word;
 }

@@ -1,15 +1,30 @@
 {
-  "name": "khmer_number_to_words",
+  "name": "number_to_khmer_words",
   "version": "1.0.0",
-  "description": "",
-  "main": "./src/index.ts",
+  "description": "Javascript and Typescript library for converting Arabic numerals to Khmer words",
+  "keywords": [
+    "number",
+    "khmer words"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "update": "npx npm-check-updates -u",
     "test": "ts-node ./test/toWords.ts"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vh13294/number-to-words-in-khmer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vh13294/number-to-words-in-khmer/issues"
+  },
+  "homepage": "https://github.com/vh13294/number-to-words-in-khmer#readme",
+  "author": "Vong Panha Huot",
+  "license": "MIT",
   "devDependencies": {
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.5"
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.2"
   }
 }
