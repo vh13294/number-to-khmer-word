@@ -1,8 +1,11 @@
 <h2 align="center">Number to Khmer words</h2>
 
-<a align="center" href="https://vh13294.github.io/number-to-khmer-word/">
-    Example
-</a>
+<p align="center">
+    <a href="https://vh13294.github.io/number-to-khmer-word/">
+        Try it!
+    </a>
+</p>
+
 
 <p align="center">
     <a href="https://www.codefactor.io/repository/github/vh13294/number-to-khmer-word">
