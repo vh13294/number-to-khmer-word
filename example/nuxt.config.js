@@ -41,6 +41,6 @@ export default {
   },
 
   router: {
-    base: '/<repository-name>/'
+    base: '/number-to-khmer-word/'
   }
 }
