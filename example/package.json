@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "update:lib": "npm i file:../compiled-lib.tgz",
+    "format": "prettier --write \"*/**.vue\"",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
