@@ -51,3 +51,4 @@ const words = numberToWord(input: number | string)
 - [ ] Clean out Readme
 - [ ] Allow copy paste but show error toast if invalid number
 - [ ] Animate text change
+- [ ] Add three different format $-USD ៛-Riel & Scientific. (use and as last word bridge)
