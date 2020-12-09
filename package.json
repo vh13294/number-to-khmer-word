@@ -9,6 +9,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.json",
     "update": "npx npm-check-updates -u",
     "test": "ts-node ./test/toWords.ts"
@@ -26,5 +27,8 @@
   "devDependencies": {
     "ts-node": "^9.1.1",
     "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
   }
 }
