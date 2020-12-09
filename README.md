@@ -5,10 +5,10 @@
 <h2 align="center">Number to Khmer words</h2>
 
 <p align="center">
-<a href="https://www.codefactor.io/repository/github/vh13294/nestjs-url-generator"><img src="https://www.codefactor.io/repository/github/vh13294/nestjs-url-generator/badge" alt="CodeFactor" /></a>
-<a href="https://www.npmjs.com/package/nestjs-url-generator"><img src="https://img.shields.io/npm/v/nestjs-url-generator.svg?style=flat-square&sanitize=true" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/package/nestjs-url-generator"><img src="https://img.shields.io/npm/dm/nestjs-url-generator.svg?style=flat-square&sanitize=true" alt="NPM Downloads" /></a>
-<a href="#"><img src="https://img.shields.io/npm/l/nestjs-url-generator.svg?colorB=black&label=LICENSE&style=flat-square&sanitize=true" alt="License"/></a>
+<a href="https://www.codefactor.io/repository/github/vh13294/number-to-khmer-word"><img src="https://www.codefactor.io/repository/github/vh13294/number-to-khmer-word/badge" alt="CodeFactor" /></a>
+<a href="https://www.npmjs.com/package/number_to_khmer_word"><img src="https://img.shields.io/npm/v/number_to_khmer_word.svg?style=flat-square&sanitize=true" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/package/number_to_khmer_word"><img src="https://img.shields.io/npm/dm/number_to_khmer_word.svg?style=flat-square&sanitize=true" alt="NPM Downloads" /></a>
+<a href="#"><img src="https://img.shields.io/npm/l/number_to_khmer_word.svg?colorB=black&label=LICENSE&style=flat-square&sanitize=true" alt="License"/></a>
 
 </p>
 
@@ -19,7 +19,7 @@ Javascript and Typescript library for converting Arabic numerals to Khmer words
 # Installation
 
 ```bash
-npm i --save nestjs-url-generator
+npm i number_to_khmer_word
 ```
 
 
@@ -27,21 +27,13 @@ npm i --save nestjs-url-generator
 
 ### Include Module
 
-First you need to import [UrlGeneratorModule]:
+First you need to import [numberToWord]:
 
 
 ```ts
-import { UrlGeneratorModule } from 'nestjs-url-generator';
+import { numberToWord } from 'number_to_khmer_word';
 
-@Module({
-    imports: [
-        UrlGeneratorModule.forRoot({
-            secret: 'secret', // optional, required only for signed URL
-            appUrl: 'localhost:3000',
-        })
-    ],
-})
-export class ApplicationModule {}
+const words = numberToWord(input: number | string)
 ```
 
 
