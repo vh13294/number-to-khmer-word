@@ -1,1 +1,1 @@
-export { toWords } from "./toWords";
+export * from "./numberToWord";

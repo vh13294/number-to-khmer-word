@@ -11,12 +11,11 @@ const ONE_BILLION = 1000_000_000;
 const ONE_TRILLION = 1000_000_000_000;
 const ONE_QUADRILLION = 1000_000_000_000_000n;
 
-const seperator = '-';
+const separator = '-';
 
-export function toWords(input: number | string): string {
+export function integerToWord(num: number): string {
     let word = '';
     let remainder = 0;
-    const num = Number(input);
 
     if (num < TEN) {
         word = SINGLE_DIGIT[num];
@@ -43,18 +42,18 @@ export function toWords(input: number | string): string {
 
     } else if (num < ONE_BILLION) {
         remainder = num % ONE_MILLION;
-        word = toWords(Math.floor(num / ONE_MILLION)) + 'លាន';
+        word = integerToWord(Math.floor(num / ONE_MILLION)) + 'លាន';
 
     } else if (num < ONE_TRILLION) {
         remainder = num % ONE_BILLION;
-        word = toWords(Math.floor(num / ONE_BILLION)) + 'ប៊ីលាន';
+        word = integerToWord(Math.floor(num / ONE_BILLION)) + 'ប៊ីលាន';
 
     } else if (num < ONE_QUADRILLION) {
         remainder = num % ONE_TRILLION;
-        word = toWords(Math.floor(num / ONE_TRILLION)) + 'ទ្រីលាន';
+        word = integerToWord(Math.floor(num / ONE_TRILLION)) + 'ទ្រីលាន';
     }
 
     if (remainder)
-        return `${word}${seperator}${toWords(remainder)}`;
+        return `${word}${separator}${integerToWord(remainder)}`;
     return word;
 }
