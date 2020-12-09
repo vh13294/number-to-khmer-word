@@ -1,4 +1,6 @@
-const SINGLE_DIGIT = ['សូន្យ', 'មួយ', 'ពីរ', 'បី', 'បួន', 'ប្រាំ', 'ប្រាំមួយ', 'ប្រាំពីរ', 'ប្រាំបី', 'ប្រាំបួន'];
+import { separator } from "./numberToWord";
+
+export const SINGLE_DIGIT = ['សូន្យ', 'មួយ', 'ពីរ', 'បី', 'បួន', 'ប្រាំ', 'ប្រាំមួយ', 'ប្រាំពីរ', 'ប្រាំបី', 'ប្រាំបួន'];
 const DOUBLE_DIGIT = ['', 'ដប់', 'ម្ភៃ', 'សាមសិប', 'សែសិប', 'ហាសិប', 'ហុកសិប', 'ចិតសិប', 'ប៉ែតសិប', 'កៅសិប'];
 
 const TEN = 10;
@@ -10,8 +12,6 @@ const ONE_MILLION = 1000_000;
 const ONE_BILLION = 1000_000_000;
 const ONE_TRILLION = 1000_000_000_000;
 const ONE_QUADRILLION = 1000_000_000_000_000n;
-
-const separator = '-';
 
 export function integerToWord(num: number): string {
     let word = '';
@@ -53,7 +53,7 @@ export function integerToWord(num: number): string {
         word = integerToWord(Math.floor(num / ONE_TRILLION)) + 'ទ្រីលាន';
     }
 
-    if (remainder)
+    if (remainder !== 0)
         return `${word}${separator}${integerToWord(remainder)}`;
     return word;
 }

@@ -65,11 +65,11 @@ import { numberToWord } from "../src/numberToWord";
 // console.log(numberToWord(9_999_999_999_999));
 
 // Test decimal
-console.log(numberToWord('0.5'));
-console.log(numberToWord('0.15'));
-console.log(numberToWord('0.1559552121'));
+console.log(numberToWord(0.5));
+console.log(numberToWord(0.15));
+console.log(numberToWord(0.1559552121));
 
-console.log(numberToWord('1.5'));
-console.log(numberToWord('10216.5'));
-console.log(numberToWord('1654564.59595209'));
+console.log(numberToWord(1.5));
+console.log(numberToWord(10_216.5));
+console.log(numberToWord(1_654_564.59595209));
 

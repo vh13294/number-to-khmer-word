@@ -6,6 +6,7 @@ const decimalSymbol = {
     decimalComma: 'ក្បៀស'
 }
 
+export const separator = '-';
 
 export function numberToWord(input: number | string): string {
     const num = Number(input);

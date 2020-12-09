@@ -1,6 +1,5 @@
-const SINGLE_DIGIT = ['សូន្យ', 'មួយ', 'ពីរ', 'បី', 'បួន', 'ប្រាំ', 'ប្រាំមួយ', 'ប្រាំពីរ', 'ប្រាំបី', 'ប្រាំបួន'];
-
-const separator = '-';
+import { SINGLE_DIGIT } from "./integerToWord";
+import { separator } from "./numberToWord";
 
 export function decimalToWord(num: string): string {
     const numArr = num.split('')
