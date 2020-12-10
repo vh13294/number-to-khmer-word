@@ -1,6 +1,6 @@
 {
   "name": "number_to_khmer_word",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Javascript and Typescript library for converting Arabic numerals to Khmer words",
   "keywords": [
     "number",

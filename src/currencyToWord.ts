@@ -41,24 +41,12 @@ function handleInteger(input: string, currencyName: string): string {
     const num = Number(input)
     const integerPart = integerToWord(num)
 
-    if(num < 100) {
-        const result = 
-            integerPart +
-            ` ${currencyName} ` +
-            SharpWord
-            
-        return result
-    } else {
-        const index = integerPart.lastIndexOf(Separator)
-        const result = 
-            integerPart.substring(0, index) +
-            ` ${AndWord}` + 
-            ` ${integerPart.substring(index + 1)}` + 
-            ` ${currencyName} ` +
-            SharpWord
-            
-        return result
-    }
+    const result =
+        integerPart +
+        ` ${currencyName} ` +
+        SharpWord
+
+    return result
 }
 
 function handleDecimal(input: string, currencyName: string): string {
@@ -67,17 +55,17 @@ function handleDecimal(input: string, currencyName: string): string {
 
     // handle 0.5 => 0.50, retain 0
     // fifty instead of five cent
-    if(decimal.length === 1) {
+    if (decimal.length === 1) {
         decimal = decimal + '0'
     }
     const decimalPart = integerToWord(Number(decimal))
 
-    const result = 
+    const result =
         integerPart +
-        ` ${currencyName}` + 
-        ` ${AndWord}` + 
-        ` ${decimalPart} ` + 
+        ` ${currencyName}` +
+        ` ${AndWord}` +
+        ` ${decimalPart} ` +
         Cent
-        
+
     return result
 }
