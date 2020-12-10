@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <label>
+    <span style="font-size: 25px; margin-right: 10px;">Mode: </span>
     <select v-model="selected" style="font-size: 25px">
       <option
         v-for="option in options"
@@ -9,7 +10,7 @@
         {{ option.text }}
       </option>
     </select>
-  </div>
+  </label>
 </template>
 
 <script>

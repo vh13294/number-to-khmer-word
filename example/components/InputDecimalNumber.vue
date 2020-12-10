@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <label style="white-space: nowrap;">
+    <span style="font-size: 25px; margin-right: 10px;">Value: </span>
     <input
       v-model="content"
       inputmode="decimal"
@@ -9,7 +10,7 @@
       @paste.prevent
       @input="handleInput"
     />
-  </div>
+  </label>
 </template>
 
 <script>
