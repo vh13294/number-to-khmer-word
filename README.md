@@ -63,7 +63,7 @@ currencyToWord('1000', 'KHR')
 
 
 ### TODO
-- [ ] Clean out Readme
-- [ ] Allow copy paste but show error toast if invalid number
+- [ ] Allow copy paste but show error toast if invalid number (insert in series)
 - [ ] Animate text change
-- [ ] Add three different format $-USD ៛-Riel & Scientific. (use and as last word bridge)
+- [ ] Test on iPhone
+- [ ] Seo

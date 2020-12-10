@@ -37,28 +37,32 @@ export default {
   methods: {
     handleKeyPress(event) {
       if (
-        !this.isDigitOrDot(event.data) &&
+        !this.isDigitOrDecimalSeperator(event.data) &&
         !this.isDeleteForwardOrBackwardKey(event.inputType)
       ) {
         event.preventDefault()
-      } else if (this.content.includes('.')) {
-        if (event.data === '.') {
+      } else if (this.doesContentContainDecimalSeperator()) {
+        if (this.isDecimalSeperator(event.data)) {
           // stop if see second '.'
           event.preventDefault()
         }
       }
     },
-    getNumberOfDecimalPlaces() {
-      return this.content.split('.')[1].length
-    },
     isDeleteForwardOrBackwardKey(inputType) {
       return inputType.includes('deleteContent')
     },
-    isDigitOrDot(val) {
-      return /^\d+$/.test(val) || val === '.'
+    isDigitOrDecimalSeperator(val) {
+      return /^[0-9,.]$/.test(val)
+    },
+    isDecimalSeperator(val) {
+      return /^[,.]$/.test(val)
+    },
+    doesContentContainDecimalSeperator(val) {
+      return [',', '.'].some(seperator => this.content.includes(seperator))
     },
     handleInput() {
-      this.$emit('input', Number(this.content))
+      const output = this.content.replaceAll(',', '.')
+      this.$emit('input', Number(output))
     },
   },
 }
