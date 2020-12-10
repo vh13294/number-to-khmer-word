@@ -42,5 +42,9 @@ export default {
 
   router: {
     base: '/number-to-khmer-word/'
+  },
+
+  workbox: {
+    cachingExtensions: '@/plugins/workbox-range-request.js'
   }
 }

@@ -1,7 +1,11 @@
 import { Separator } from './helpers/constant';
 import { integerToWord } from './helpers/integerToWord';
 
-export type Currency = keyof typeof currencyCountry
+const AndWord = 'និង'
+const SharpWord = 'គត់'
+const Cent = 'សេន'
+
+type Currency = keyof typeof currencyCountry
 
 const currencyCountry = {
     USD: {
@@ -13,10 +17,6 @@ const currencyCountry = {
         name: 'រៀល',
     }
 }
-
-const AndWord = 'និង'
-const SharpWord = 'គត់'
-const Cent = 'សេន'
 
 export function currencyToWord(input: number | string, currency: Currency): string {
     const num = Number(input);
@@ -38,24 +38,35 @@ export function currencyToWord(input: number | string, currency: Currency): stri
 }
 
 function handleInteger(input: string, currencyName: string): string {
-    const integerPart = integerToWord(Number(input))
+    const num = Number(input)
+    const integerPart = integerToWord(num)
 
-    const index = integerPart.lastIndexOf(Separator)
-    const result = 
-        integerPart.substring(0, index) +
-        ` ${AndWord}` + 
-        ` ${integerPart.substring(index + 1)}` + 
-        ` ${currencyName} ` +
-        SharpWord
-        
-    return result
+    if(num < 100) {
+        const result = 
+            integerPart +
+            ` ${currencyName} ` +
+            SharpWord
+            
+        return result
+    } else {
+        const index = integerPart.lastIndexOf(Separator)
+        const result = 
+            integerPart.substring(0, index) +
+            ` ${AndWord}` + 
+            ` ${integerPart.substring(index + 1)}` + 
+            ` ${currencyName} ` +
+            SharpWord
+            
+        return result
+    }
 }
 
 function handleDecimal(input: string, currencyName: string): string {
     let [integer, decimal] = input.split('.')
     const integerPart = integerToWord(Number(integer))
 
-    // handle 0.5 => 0.50 , 50 cent retain 0
+    // handle 0.5 => 0.50, retain 0
+    // fifty instead of five cent
     if(decimal.length === 1) {
         decimal = decimal + '0'
     }
