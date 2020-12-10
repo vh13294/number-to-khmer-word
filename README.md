@@ -37,13 +37,28 @@ npm i number_to_khmer_word
 
 ### Include Module
 
-First you need to import [numberToWord]:
-
-
 ```ts
 import { numberToWord } from 'number_to_khmer_word';
 
 const words = numberToWord(input: number | string)
+
+// Example
+numberToWord(100_000)
+numberToWord('1000')
+```
+
+For Currency Mode
+
+CurrencyType = ['USD', 'KHR']
+
+```ts
+import { currencyToWord } from 'number_to_khmer_word';
+
+const words = currencyToWord(input: number | string, currency: currencyType)
+
+// Example
+currencyToWord(100_000, 'USD')
+currencyToWord('1000', 'KHR')
 ```
 
 

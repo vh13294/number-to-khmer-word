@@ -1,21 +1,19 @@
-import { decimalToWord } from "./decimalToWord";
-import { integerToWord } from "./integerToWord";
+import { decimalToWord } from "./helpers/decimalToWord";
+import { integerToWord } from "./helpers/integerToWord";
 
 const decimalSymbol = {
     decimalPoint: 'ចុច',
     decimalComma: 'ក្បៀស'
 }
 
-export const separator = '-';
-
 export function numberToWord(input: number | string): string {
     const num = Number(input);
 
-    if(isNaN(num)) {
+    if (isNaN(num)) {
         throw Error('The number format is invalid')
     }
 
-    if(Number.isInteger(num)) {
+    if (Number.isInteger(num)) {
         return integerToWord(num)
     } else {
         return handleDecimal(input.toString())

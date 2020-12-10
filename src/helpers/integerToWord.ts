@@ -1,4 +1,4 @@
-import { separator } from "./numberToWord";
+import { Separator } from "./constant";
 
 export const SINGLE_DIGIT = ['សូន្យ', 'មួយ', 'ពីរ', 'បី', 'បួន', 'ប្រាំ', 'ប្រាំមួយ', 'ប្រាំពីរ', 'ប្រាំបី', 'ប្រាំបួន'];
 const DOUBLE_DIGIT = ['', 'ដប់', 'ម្ភៃ', 'សាមសិប', 'សែសិប', 'ហាសិប', 'ហុកសិប', 'ចិតសិប', 'ប៉ែតសិប', 'កៅសិប'];
@@ -54,6 +54,6 @@ export function integerToWord(num: number): string {
     }
 
     if (remainder !== 0)
-        return `${word}${separator}${integerToWord(remainder)}`;
+        return `${word}${Separator}${integerToWord(remainder)}`;
     return word;
 }
