@@ -6,6 +6,7 @@ console.log(currencyToWord(11, 'USD'));
 console.log(currencyToWord(9, 'USD'));
 
 console.log(currencyToWord(0.5, 'USD'));
+console.log(currencyToWord(0.501, 'USD'));
 console.log(currencyToWord(1.99, 'USD'));
 console.log(currencyToWord(100_231.15, 'USD'));
 console.log(currencyToWord(1230, 'USD'));
