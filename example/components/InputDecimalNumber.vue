@@ -1,11 +1,10 @@
 <template>
-  <label style="white-space: nowrap;">
+  <label>
     <span style="font-size: 25px; margin-right: 10px;">Value: </span>
     <input
       v-model="content"
       inputmode="decimal"
       placeholder="ចំនួន"
-      style="font-size: 30px"
       @beforeinput="handleKeyPress"
       @paste.prevent
       @input="handleInput"
@@ -59,7 +58,7 @@ export default {
       return /^[,.]$/.test(val)
     },
     doesContentContainDecimalSeperator(val) {
-      return [',', '.'].some(seperator => this.content.includes(seperator))
+      return [',', '.'].some((seperator) => this.content.includes(seperator))
     },
     handleInput() {
       const output = this.content.replaceAll(',', '.')
@@ -76,12 +75,12 @@ input {
   border-radius: 4px;
   border: 1px solid #dcdfe6;
   box-sizing: border-box;
-  color: #606266;
-  height: 40px;
-  line-height: 40px;
+  color: #4e4e4e;
+  padding: 5px 0;
+  line-height: 120%;
   outline: none;
-  padding: 0 15px;
-  width: 90%;
+  max-width: 80%;
+  font-size: 30px;
 }
 
 ::placeholder {
