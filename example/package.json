@@ -17,7 +17,7 @@
     "@nuxtjs/pwa": "^3.3.2",
     "core-js": "^3.8.1",
     "number_to_khmer_word": "file:../compiled-lib.tgz",
-    "nuxt": "^2.14.10"
+    "nuxt": "^2.14.11"
   },
   "devDependencies": {
     "eslint-config-prettier": "^7.0.0",

@@ -53,7 +53,7 @@ function handleDecimal(input: string, currencyName: string): string {
     let [integer, decimal] = input.split('.')
     const integerPart = integerToWord(Number(integer))
 
-    if (decimal.length < 2) {
+    if (decimal.length <= 2) {
         // handle 0.5 => 0.50, retain 0
         // fifty instead of five CentWord
         if (decimal.length === 1) {
