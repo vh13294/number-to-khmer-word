@@ -11,7 +11,12 @@ export default {
       { hid: 'description', name: 'description', content: 'Converting Arabic numerals(Currency) to Khmer words.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'apple-touch-icon',
+        type: 'image/png',
+        href: 'https://vh13294.github.io/number-to-khmer-word/app-icon.png'
+      }
     ]
   },
 
@@ -49,6 +54,13 @@ export default {
   },
 
   pwa: {
+    meta: {
+      nativeUI: true,
+      theme_color: '#add8e6'
+    },
+    manifest: {
+      short_name: 'Num 2 Khmer',
+    },
     icon: {
       fileName: 'app-icon.png',
     },

@@ -1,5 +1,7 @@
 {
-  "name": "example",
+  "name": "Number To Khmer Words",
+  "description": "Converting numerals/currency to Khmer words",
+  "author": "Vong Panha Huot",
   "version": "1.0.0",
   "private": true,
   "scripts": {
