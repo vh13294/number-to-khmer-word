@@ -16,7 +16,7 @@
   "dependencies": {
     "@nuxtjs/pwa": "^3.3.2",
     "core-js": "^3.8.1",
-    "number_to_khmer_word": "file:../compiled-lib.tgz",
+    "number_to_khmer_word": "file:number_to_khmer_word-0.0.5.tgz",
     "nuxt": "^2.14.11"
   },
   "devDependencies": {

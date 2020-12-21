@@ -6,7 +6,6 @@
     </a>
 </p>
 
-
 <p align="center">
     <a href="https://www.codefactor.io/repository/github/vh13294/number-to-khmer-word">
         <img src="https://www.codefactor.io/repository/github/vh13294/number-to-khmer-word/badge" alt="CodeFactor" />
@@ -31,7 +30,6 @@ Javascript and Typescript library for converting Arabic numerals to Khmer words
 ```bash
 npm i number_to_khmer_word
 ```
-
 
 # Basic Usage
 
@@ -61,9 +59,7 @@ currencyToWord(100_000, 'USD')
 currencyToWord('1000', 'KHR')
 ```
 
-
 ### TODO
+
 - [ ] Allow copy paste but show error toast if invalid number (insert in series)
 - [ ] Animate text change
-- [ ] Test on iPhone
-- [ ] Seo
