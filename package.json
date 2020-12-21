@@ -1,6 +1,6 @@
 {
   "name": "number_to_khmer_word",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Javascript and Typescript library for converting Arabic numerals to Khmer words",
   "keywords": [
     "number",
@@ -29,10 +29,8 @@
   "author": "Vong Panha Huot",
   "license": "MIT",
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.2"
-  },
-  "dependencies": {
-    "rimraf": "^3.0.2"
   }
 }
